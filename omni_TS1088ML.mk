@@ -11,9 +11,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
 
-# Inherit from TS1088ML device
-$(call inherit-product, device/digma/TS1088ML/device.mk)
-
 PRODUCT_DEVICE := TS1088ML
 PRODUCT_NAME := omni_TS1088ML
 PRODUCT_BRAND := DIGMA
