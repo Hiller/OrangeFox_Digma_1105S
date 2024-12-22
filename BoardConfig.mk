@@ -11,8 +11,6 @@ DEVICE_PATH := device/digma/TS1088ML
 ALLOW_MISSING_DEPENDENCIES := true
 
 # Architecture
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
@@ -78,7 +76,7 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 PLATFORM_VERSION := 16.1.0
 
 # TWRP Configuration
-TW_THEME := portrait_hdpi
+TW_THEME := portrait_mdpi
 TW_EXTRA_LANGUAGES := false
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_EXCLUDE_SUPERSU := true
@@ -87,6 +85,7 @@ TW_EXCLUDE_APEX := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_NO_EXFAT := true
+TW_NO_EXFAT_FUSE: = true
 TW_INCLUDE_FB2PNG := false
 TW_EXCLUDE_TZDATA := true
 TW_EXCLUDE_TWRPAPP := true
@@ -98,3 +97,5 @@ TW_EXCLUDE_NANO := true
 TW_INCLUDE_DUMLOCK := false
 TW_HAS_DOWNLOAD_MODE := false
 TW_INCLUDE_NTFS_3G := false
+TW_NO_REBOOT_BOOTLOADER := true
+TW_USE_NEW_MINADBD := true
