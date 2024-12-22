@@ -11,6 +11,8 @@ DEVICE_PATH := device/digma/TS1088ML
 ALLOW_MISSING_DEPENDENCIES := true
 
 # Architecture
+TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
@@ -66,9 +68,12 @@ DEVICE_RESOLUTION := 1280x800
 BOARD_HAS_MTK_HARDWARE := true
 MTK_HARDWARE := true
 BOARD_USES_LEGACY_MTK_AV_BLOB := true
+USE_CLANG_PLATFORM_BUILD := true
+BIONIC_LIBC_DISABLE_CLANG := true
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
 
 # Hack: prevent anti rollback
 PLATFORM_VERSION := 16.1.0
