@@ -7,6 +7,8 @@
 
 DEVICE_PATH := device/digma/TS1088ML
 
+TARGET_GLOBAL_CFLAGS += -Wno-error=implicit-fallthrough -Wno-error=stringop-truncation
+TARGET_GLOBAL_CPPFLAGS += -Wno-error=implicit-fallthrough -Wno-error=stringop-truncation
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
